@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/Samples/consensus.net.microservice/bin/Debug/netcoreapp2.1/consensus.net.dll",
+            "program": "${workspaceFolder}/bin/Debug/netcoreapp2.2/consensus.net.service-registry.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Samples/consensus.net.microservice",
+            "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart",
             "launchBrowser": {

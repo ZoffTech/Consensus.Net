@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace consensus.net.Controllers
+namespace consensus.net.service_registry.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

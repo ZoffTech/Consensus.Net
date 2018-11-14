@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/Samples/consensus.net.microservice/consensus.net.csproj"
+                "${workspaceFolder}/consensus.net.service-registry.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
