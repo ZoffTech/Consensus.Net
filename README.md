@@ -1,3 +1,4 @@
+
 # Consensus.Net
 ## .Net Core Microsevice Framework
 
@@ -15,13 +16,12 @@ The main idea of behind Consensus Framework is to deliver in a simple and fundam
 
 * Create a .Net Core Api Project (later to be used as a template) that incorporates the following features:  
    1. REST API  
-   2. Swagger UI  
-   3. Basic HealthCheck  
+   2. Basic HealthCheck  
         * System Status Check 
         * Url Check
         * ResponseTimes Check
-   4. Docker Ready.  
-   5. Example Project - Service Registry
+   3. Docker Ready.  
+   4. Example Project - Service Registry
 
 ### PHASE 2 (TBD)
 

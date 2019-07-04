@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using consensus.net.bus;
 using Microsoft.AspNetCore.Mvc;
 
 namespace consensus.net.service_registry.Controllers
@@ -10,6 +11,10 @@ namespace consensus.net.service_registry.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        public ValuesController()
+        {
+
+        }
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()

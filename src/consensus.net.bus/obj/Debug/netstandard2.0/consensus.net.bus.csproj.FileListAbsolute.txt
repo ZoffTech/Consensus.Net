@@ -1,0 +1,12 @@
+C:\sources\Consensus.Net\src\consensus.net.bus\bin\Debug\netstandard2.0\consensus.net.bus.deps.json
+C:\sources\Consensus.Net\src\consensus.net.bus\bin\Debug\netstandard2.0\consensus.net.bus.dll
+C:\sources\Consensus.Net\src\consensus.net.bus\bin\Debug\netstandard2.0\consensus.net.bus.pdb
+C:\sources\Consensus.Net\src\consensus.net.bus\bin\Debug\netstandard2.0\consensus.net.interfaces.dll
+C:\sources\Consensus.Net\src\consensus.net.bus\bin\Debug\netstandard2.0\consensus.net.interfaces.pdb
+C:\sources\Consensus.Net\src\consensus.net.bus\obj\Debug\netstandard2.0\consensus.net.bus.csprojAssemblyReference.cache
+C:\sources\Consensus.Net\src\consensus.net.bus\obj\Debug\netstandard2.0\consensus.net.bus.csproj.CoreCompileInputs.cache
+C:\sources\Consensus.Net\src\consensus.net.bus\obj\Debug\netstandard2.0\consensus.net.bus.AssemblyInfoInputs.cache
+C:\sources\Consensus.Net\src\consensus.net.bus\obj\Debug\netstandard2.0\consensus.net.bus.AssemblyInfo.cs
+C:\sources\Consensus.Net\src\consensus.net.bus\obj\Debug\netstandard2.0\consensus.net.bus.csproj.CopyComplete
+C:\sources\Consensus.Net\src\consensus.net.bus\obj\Debug\netstandard2.0\consensus.net.bus.dll
+C:\sources\Consensus.Net\src\consensus.net.bus\obj\Debug\netstandard2.0\consensus.net.bus.pdb

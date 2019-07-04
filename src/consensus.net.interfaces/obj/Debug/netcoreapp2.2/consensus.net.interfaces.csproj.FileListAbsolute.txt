@@ -1,0 +1,9 @@
+C:\sources\Consensus.Net\src\consensus.net.interfaces\bin\Debug\netcoreapp2.2\consensus.net.interfaces.deps.json
+C:\sources\Consensus.Net\src\consensus.net.interfaces\bin\Debug\netcoreapp2.2\consensus.net.interfaces.dll
+C:\sources\Consensus.Net\src\consensus.net.interfaces\bin\Debug\netcoreapp2.2\consensus.net.interfaces.pdb
+C:\sources\Consensus.Net\src\consensus.net.interfaces\obj\Debug\netcoreapp2.2\consensus.net.interfaces.csprojAssemblyReference.cache
+C:\sources\Consensus.Net\src\consensus.net.interfaces\obj\Debug\netcoreapp2.2\consensus.net.interfaces.csproj.CoreCompileInputs.cache
+C:\sources\Consensus.Net\src\consensus.net.interfaces\obj\Debug\netcoreapp2.2\consensus.net.interfaces.AssemblyInfoInputs.cache
+C:\sources\Consensus.Net\src\consensus.net.interfaces\obj\Debug\netcoreapp2.2\consensus.net.interfaces.AssemblyInfo.cs
+C:\sources\Consensus.Net\src\consensus.net.interfaces\obj\Debug\netcoreapp2.2\consensus.net.interfaces.dll
+C:\sources\Consensus.Net\src\consensus.net.interfaces\obj\Debug\netcoreapp2.2\consensus.net.interfaces.pdb
