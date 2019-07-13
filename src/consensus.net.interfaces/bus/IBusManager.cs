@@ -3,9 +3,9 @@ using System.Threading.Tasks;
 
 namespace consensus.net.bus
 {
-    public interface IBusManager
+    public interface IEventBusOld
     {
-        void AddConsumer<T>(T consumer, string queueName) where T : class,IConsumer, new();
+        void AddSubscriber<T>(T subscriber, string queueName) where T : class,IConsumer, new();
 
         IRequestClient<T> CreateRequestClient<T>(int timeoutSeconds = 60) where T : class;
 

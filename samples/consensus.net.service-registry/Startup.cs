@@ -28,11 +28,19 @@ namespace consensus.net.service_registry {
 
             services.AddMvc ().SetCompatibilityVersion (CompatibilityVersion.Version_2_2);
            
-            services.AddTransient<PingRequest>();
-            services.AddSingleton<PingRequestConsumer>();
-            services.AddSingleton<PingResponseConsumer>();
+         
             services.AddSingleton<IConfiguration>(Configuration);
-            services.AddConsensus();
+            services.AddConsensus(config =>
+            {
+                config.EventBusOptions.Consumers = new List<MassTransit.IConsumer>
+                {
+                    new HeartbeatResponseHandler(),
+                    new HeartbeatRequestHandler(),
+                };
+
+
+            }
+            );
             services.AddHostedService<PingScheduler>();
 
         }
@@ -48,6 +56,7 @@ namespace consensus.net.service_registry {
 
             app.UseHttpsRedirection ();
             app.UseMvc ();
+            app.EnableConsensus();
         }
     }
 }

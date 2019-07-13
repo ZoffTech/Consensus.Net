@@ -1,32 +1,41 @@
 using consensus.net.bus;
 using consensus.net.bus.Contracts;
-using consensus.net.bus.Contracts.Consumers;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System.Linq;
+using System;
 
-namespace consensus.net.core {
-    public static class CoreExtensions {
+namespace consensus.net.core
+{
+    public static class CoreExtensions
+    {
+        private static IConfiguration Configuration;
 
-        static IConfiguration Configuration;
-        public static void AddConsensus (this IServiceCollection services,ConsensusOptions options=null) {
-
-            Configuration = services.BuildServiceProvider ().GetService (typeof (IConfiguration)) as IConfiguration;
+        public static void AddConsensus(this IServiceCollection services, Action<IConsensusOptions> config = null)
+        {
+            Configuration = services.BuildServiceProvider().GetService(typeof(IConfiguration)) as IConfiguration;
 
             AppData.HostName = Configuration["HostName"];
 
-            services.AddSingleton<BusManagerOptions>();
+            IConsensusOptions options = new ConsensusOptions();
 
-            services.AddSingleton<IBusManager,BusManager>();
+            if (config != null)
+                config(options);
+
           
-            services.AddHealthChecks ();
 
 
-            
+            services.AddSingleton< IConsensusOptions>(options);
+            foreach (var item in options.EventBusOptions.Consumers)
+            {
+                services.AddTransient(item.GetType());
+            }
+         
+
+            services.AddSingleton<IEventBus, EventBus>();
+
+            services.AddHealthChecks();
+
+            services.BuildServiceProvider();
         }
-
     }
 }
-

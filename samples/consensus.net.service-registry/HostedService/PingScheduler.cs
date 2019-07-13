@@ -12,15 +12,15 @@ namespace consensus.net.service_registry.HostedService
     public class PingScheduler : IHostedService, IDisposable
     {
         private readonly ILogger _logger;
-        private readonly IBusManager _bus;
-        private readonly PingRequest _request;
+        private readonly IEventBus _bus;
+        private readonly HeartbeatRequestEvent _request;
         private Timer _timer;
 
-        public PingScheduler(IBusManager bus, ILogger<PingScheduler> logger,PingRequest request)
+        public PingScheduler(IEventBus bus, ILogger<PingScheduler> logger)
         {
             _logger = logger;
             _bus = bus;
-            _request = request;
+            _request = new HeartbeatRequestEvent(logger);
         }
 
         public Task StartAsync(CancellationToken cancellationToken)

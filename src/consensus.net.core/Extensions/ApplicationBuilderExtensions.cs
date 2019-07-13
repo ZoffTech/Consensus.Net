@@ -1,3 +1,5 @@
+using consensus.net.bus;
+using consensus.net.bus.Contracts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Configuration;
@@ -17,6 +19,12 @@ namespace consensus.net.core {
             app.UseHealthChecks ("/hc", new HealthCheckOptions {
                 Predicate = (_) => true
             });
+
+            var eventbus = app.ApplicationServices.GetService<IEventBus>();
+            if (eventbus != null)
+                eventbus.Start();
+
+
         }
     }
 

@@ -1,19 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace consensus.net.bus.Contracts
+﻿namespace consensus.net.bus.Contracts
 {
-    interface IEventBus
+    /// <summary>
+    /// Event Bus interface
+    /// </summary>
+    public interface IEventBus
     {
-        void Publish(Event @event);
+        void Start();
 
-        void Subscribe<T, TH>() where T : Event where TH : IIntegrationEventHandler<T>;
+        void Publish<T>(T @event) where T: class;
 
-        void SubscribeDynamic<TH>(string eventName) where TH : IDynamicIntegrationEventHandler;
+        void Subscribe<T, TH>() where T : Event, new() where TH : EventHandler<T>, new();
 
-        void UnsubscribeDynamic<TH>(string eventName) where TH : IDynamicIntegrationEventHandler;
+        void SubscribeGeneric<TH>(string eventName) where TH : GenericEventHandler, new();
 
-        void Unsubscribe<T, TH>() where TH : IIntegrationEventHandler<T> where T : Event;
+        void UnsubscribeGeneric<TH>(string eventName) where TH : GenericEventHandler;
+
+        void Unsubscribe<T, TH>() where TH : EventHandler<T>, new() where T : Event, new();
     }
 }

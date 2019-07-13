@@ -9,6 +9,6 @@ namespace consensus.net.bus.Contracts
     public static class AppData
     {
         public static String HostName;
-        public static ILogger Logger;
+     //   public static ILogger Logger;
     }
 }

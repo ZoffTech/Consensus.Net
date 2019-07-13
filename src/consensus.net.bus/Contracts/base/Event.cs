@@ -1,7 +1,10 @@
+using MassTransit;
 using System;
+using System.Threading.Tasks;
 
 namespace consensus.net.bus.Contracts {
-    public abstract class Event : IMessage , IDisposable{
+    public abstract class Event :  IDisposable
+    {
         public Guid Id { get; set; }
         public DateTime Timestamp { get; set; }
 
@@ -15,7 +18,36 @@ namespace consensus.net.bus.Contracts {
         {
            
         }
+
+      
+       
     }
+
+
+    public class GenericEvent 
+    {
+        public GenericEvent()
+        {
+
+        }
+    }
+
+
+
+    public abstract class EventHandler<T> : IConsumer<T> where T : class, new()
+    {
+        public abstract Task Consume(ConsumeContext<T> context);
+    }
+
+
+    public abstract class GenericEventHandler : EventHandler<GenericEvent>
+    {
+        public GenericEventHandler()
+        {
+
+        }
+    }
+
 
     public interface IMessage 
     {

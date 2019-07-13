@@ -6,13 +6,16 @@ using System.Threading.Tasks;
 
 namespace consensus.net.core
 {
-    public class ConsensusOptions
+    public class ConsensusOptions : IConsensusOptions
     {
 
         public ConsensusOptions()
         {
 
         }
+
+        public IEventBusOptions EventBusOptions { get; set; } = new EventBusOptions();
+
 
         public List<IListener> Listeners = new List<IListener>();
 
